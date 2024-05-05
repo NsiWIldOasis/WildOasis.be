@@ -15,10 +15,13 @@ public static class DependencyInjection
         var dbConfiguration = new PostgresDbConfiguration();
         configuration.GetSection("PostgresDbConfiguration").Bind(dbConfiguration);
 
-        services.AddDbContext<WildOasisDbContext>(options =>
-            options.UseNpgsql(dbConfiguration.ConnectionString,
-                x => x.MigrationsAssembly(typeof(WildOasisDbContext).Assembly.FullName)));
-       
+        if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Test")
+        {
+            services.AddDbContext<WildOasisDbContext>(options =>
+                options.UseNpgsql(dbConfiguration.ConnectionString,
+                    x => x.MigrationsAssembly(typeof(WildOasisDbContext).Assembly.FullName)));
+        }
+
         services.AddScoped<IWildOasisDbContext>(provider => provider.GetRequiredService<WildOasisDbContext>());
 
         services.AddScoped<IResortServices, ResortService>();
