@@ -26,7 +26,7 @@ public class CabinDetailsQueryTests : BaseTests
 
         //When
 
-        var response = await Client.GetAsync($"/api/Cabin/");
+        var response = await Client.GetAsync($"/api/Cabin/DetailsOne?Id={cabin.Id.ToString()}");
 
 
 
