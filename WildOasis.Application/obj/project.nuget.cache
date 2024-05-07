@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "qpQj6VCCBs24HsUqQS1SZcJwnxA0r/PMeHjMEcKrv7yDBUZi5AQ/DKarKABZOJuvphLeSJXPnQ9cgc6tQ4UbVg==",
+=======
   "dgSpecHash": "r2f838L8+Mynn3neKrGXgbsgwkaEBveQjiWuEzlR9VyET2MXhtTHvxGser40gCSSla24dQiiLw4jBnISTedxCA==",
+>>>>>>> d97c0336efdef8331a04e8edf1823e0753d0fdc9
   "success": true,
   "projectFilePath": "/Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.Application/WildOasis.Application.csproj",
   "expectedPackageFiles": [

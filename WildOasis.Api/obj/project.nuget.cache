@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "/4rfqEk4Cnlg5gIjHFCvN02lY5bjqdXj0zYIxZtM1g/9dLwRtdRpcdaTFkUAmEgqeyaq5gRjBkjsyTrVZis7sQ==",
+=======
   "dgSpecHash": "xdfogTpmsfPCO83U1si0bQxHSnSMlJTVK22T7yNqYu2NEet/7VpTZNle1o9AueYuUjW8gS+TULNcqrG7HcLNdQ==",
+>>>>>>> d97c0336efdef8331a04e8edf1823e0753d0fdc9
   "success": true,
   "projectFilePath": "/Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.Api/WildOasis.Api.csproj",
   "expectedPackageFiles": [
@@ -21,11 +25,19 @@
     "/Users/nikolat/.nuget/packages/microsoft.codeanalysis.csharp/4.5.0/microsoft.codeanalysis.csharp.4.5.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.codeanalysis.csharp.workspaces/4.5.0/microsoft.codeanalysis.csharp.workspaces.4.5.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.5.0/microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
+<<<<<<< HEAD
+    "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore/8.0.4/microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
+    "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.4/microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
+    "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.4/microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
+    "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.design/8.0.4/microsoft.entityframeworkcore.design.8.0.4.nupkg.sha512",
+    "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.4/microsoft.entityframeworkcore.relational.8.0.4.nupkg.sha512",
+=======
     "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore/8.0.2/microsoft.entityframeworkcore.8.0.2.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.2/microsoft.entityframeworkcore.abstractions.8.0.2.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.2/microsoft.entityframeworkcore.analyzers.8.0.2.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.design/8.0.2/microsoft.entityframeworkcore.design.8.0.2.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.2/microsoft.entityframeworkcore.relational.8.0.2.nupkg.sha512",
+>>>>>>> d97c0336efdef8331a04e8edf1823e0753d0fdc9
     "/Users/nikolat/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",

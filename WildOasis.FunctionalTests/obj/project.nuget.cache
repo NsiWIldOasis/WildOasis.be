@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "hn/bAFYaUUv99udTvLVYmNLjBVJfQnQ13m5GCqZLLvm/Ef7HqVFcdDVEjALSIy5jD6mO9vcIcrQTxd3OiMG2jQ==",
+=======
   "dgSpecHash": "vpE1SaYI72DTAIHTtha+osyuz4hItECSDbCzFYdLpoC+1aYLBx2SKZyFwGpJaw8wkDKlBYYDi176VRKOUuxPAg==",
+>>>>>>> d97c0336efdef8331a04e8edf1823e0753d0fdc9
   "success": true,
   "projectFilePath": "/Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.FunctionalTests/WildOasis.FunctionalTests.csproj",
   "expectedPackageFiles": [

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WildOasis.Domain.Enums;
@@ -12,9 +13,11 @@ using WildOasis.Infrastructure.Contexts;
 namespace WildOasis.Infrastructure.Migrations
 {
     [DbContext(typeof(WildOasisDbContext))]
-    partial class WildOasisDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240507172313_AddSmartEnum")]
+    partial class AddSmartEnum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
