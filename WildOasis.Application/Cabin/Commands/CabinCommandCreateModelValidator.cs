@@ -1,4 +1,5 @@
 using FluentValidation;
+using WildOasis.Application.Common.Validators;
 
 namespace WildOasis.Application.Cabin.Commands;
 
@@ -13,6 +14,7 @@ public class CabinCommandCreateModelValidator : AbstractValidator<CabinCommandCr
         RuleFor(x => x.cabin.RegularPrice).NotEmpty();
         RuleFor(x => x.cabin.Discount).NotEmpty().LessThan(x=>x.cabin.RegularPrice);
         RuleFor(x => x.cabin.Image).NotEmpty();
+        RuleFor(x => x.cabin).SetValidator(new CabinCreateDtoValidator());
     }
 
 }

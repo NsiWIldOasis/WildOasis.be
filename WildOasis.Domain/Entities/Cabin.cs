@@ -1,14 +1,20 @@
+using WildOasis.Domain.Enums;
+
 namespace WildOasis.Domain.Entities;
 
 public class Cabin
 {
+    private Cabin()
+    {
+    }
     public Cabin(
         string name,
         string description,
         int maxCapacity,
         int regularPrice,
         int discount,
-        string image)
+        string image,
+        Category category)
     {
         Id = Guid.NewGuid();
         Name = name;
@@ -17,11 +23,15 @@ public class Cabin
         RegularPrice = regularPrice;
         Discount = discount;
         Image = image;
+        Category = category;
 
     }
 
-    private Cabin()
+    public Cabin AddResort(Resort resort)
     {
+        Resort = resort;
+        return this;
+
     }
 
     public Guid Id { get;  set; }
@@ -31,16 +41,14 @@ public class Cabin
     public int RegularPrice { get;  set; }
     public int Discount { get; set; }
     public string Image { get;  set; }
+    public Category Category { get; private set; }
+
     public Resort Resort
     {
         get;
          set;
     } 
 
-    public Cabin AddResort(Resort resort)
-    {
-        Resort = resort;
-        return this;
-
-    }
+    
+   
 }
