@@ -11,8 +11,9 @@ namespace WildOasis.BaseTest.Builders.Dto;
         private int _regularPrice = 80;
         private int _discount = 10;
         private string _image = "imagestring";
+        private int _category = 1;
 
-        public CabinCreateDto Build() => new CabinCreateDto(_resortId, _name, _description, _maxCapacity, _regularPrice, _discount, _image);
+        public CabinCreateDto Build() => new CabinCreateDto(_resortId, _name, _description, _maxCapacity, _regularPrice, _discount, _image,_category);
         
         public CabinCreateDtoBuilder WithResortId(Guid resortId)
         {

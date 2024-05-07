@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WildOasis.BaseTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b26de01fcbdd7a14f10f1ca6309dd130d4b55416")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d262c206116b8d4081a46d63de225edb996d7e7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("WildOasis.BaseTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WildOasis.BaseTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

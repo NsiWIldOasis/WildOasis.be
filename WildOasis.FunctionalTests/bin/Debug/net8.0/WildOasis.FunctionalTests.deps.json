@@ -196,7 +196,7 @@
           "System.Collections.Immutable": "8.0.0.0",
           "System.Collections.NonGeneric": "8.0.0.0",
           "System.Collections.Specialized": "8.0.0.0",
-          "System.ComponentModel.Annotations": "8.0.0.0",
+          "System.ComponentModel.Annotations.Reference": "8.0.0.0",
           "System.ComponentModel.DataAnnotations": "4.0.0.0",
           "System.ComponentModel": "8.0.0.0",
           "System.ComponentModel.EventBasedAsync": "8.0.0.0",
@@ -355,6 +355,20 @@
         },
         "compile": {
           "WildOasis.FunctionalTests.dll": {}
+        }
+      },
+      "Ardalis.SmartEnum/8.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Ardalis.SmartEnum.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net8.0/Ardalis.SmartEnum.dll": {}
         }
       },
       "Castle.Core/5.1.1": {
@@ -1410,6 +1424,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {},
       "System.Configuration.ConfigurationManager/4.4.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.4.0"
@@ -2082,6 +2097,7 @@
       },
       "WildOasis.Domain/1.0.0": {
         "dependencies": {
+          "Ardalis.SmartEnum": "8.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2"
         },
         "runtime": {
@@ -2991,7 +3007,7 @@
         },
         "compileOnly": true
       },
-      "System.ComponentModel.Annotations/8.0.0.0": {
+      "System.ComponentModel.Annotations.Reference/8.0.0.0": {
         "compile": {
           "System.ComponentModel.Annotations.dll": {}
         },
@@ -3917,6 +3933,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Ardalis.SmartEnum/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qGIfpKhSQeLouycBLosGD4qFqgPa5NKzzkH/59oSHyfs3FSbaO6JChpNEMnkslOyQRLbRXj2ImkA0uZdX19IZA==",
+      "path": "ardalis.smartenum/8.0.0",
+      "hashPath": "ardalis.smartenum.8.0.0.nupkg.sha512"
+    },
     "Castle.Core/5.1.1": {
       "type": "package",
       "serviceable": true,
@@ -4553,6 +4576,13 @@
       "sha512": "sha512-ztl69Xp0Y/UXCL+3v3tEU+lIy+bvjKNUmopn1wep/a291pVPK7dxBd6T7WnlQqRog+d1a/hSsgRsmFnIBKTPLQ==",
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/4.4.0": {
       "type": "package",
@@ -5767,7 +5797,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.ComponentModel.Annotations/8.0.0.0": {
+    "System.ComponentModel.Annotations.Reference/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

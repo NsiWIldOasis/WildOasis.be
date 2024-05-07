@@ -897,3 +897,4 @@
 /Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.FunctionalTests/obj/Debug/net8.0/WildOasis.FunctionalTests.pdb
 /Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.FunctionalTests/obj/Debug/net8.0/WildOasis.FunctionalTests.genruntimeconfig.cache
 /Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.FunctionalTests/obj/Debug/net8.0/ref/WildOasis.FunctionalTests.dll
+/Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.FunctionalTests/bin/Debug/net8.0/Ardalis.SmartEnum.dll

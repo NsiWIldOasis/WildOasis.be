@@ -5,6 +5,7 @@ using FluentAssertions.Execution;
 using WildOasis.Application.Common.Dto.Cabin;
 using WildOasis.BaseTest.Builders.Domain;
 using WildOasis.Domain.Entities;
+using WildOasis.Domain.Enums;
 using WildOasis.Infrastructure.Contexts;
 
 namespace WildOasis.FunctionalTests.Cabins.Queries;
@@ -68,7 +69,7 @@ public class CabinDetailsQueryTests : BaseTests
         //Given
 
         var resort = new Resort("resort1", "restordescritpion","adress1234",123456789);
-        var cabin = new Cabin("cabin12", "cabindescprtion", 3, 89, 10, "stringimages");
+        var cabin = new Cabin("cabin12", "cabindescprtion", 3, 89, 10, "stringimages",Category.Bungalow);
         cabin.AddResort(resort);
         await WildOasisDbContext.Cabins.AddAsync(cabin);
         await WildOasisDbContext.SaveChangesAsync();

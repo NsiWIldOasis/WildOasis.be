@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using WildOasis.Domain.Enums;
 using WildOasis.Infrastructure.Contexts;
 
 #nullable disable
@@ -17,7 +18,7 @@ namespace WildOasis.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.2")
+                .HasAnnotation("ProductVersion", "8.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -315,12 +316,17 @@ namespace WildOasis.Infrastructure.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
 
+                    b.Property<int>("Category")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(1);
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Discount")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Discount")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -333,8 +339,8 @@ namespace WildOasis.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("RegularPrice")
-                        .HasColumnType("numeric");
+                    b.Property<int>("RegularPrice")
+                        .HasColumnType("integer");
 
                     b.Property<Guid>("ResortId")
                         .HasColumnType("uuid");
@@ -363,8 +369,8 @@ namespace WildOasis.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Number")
-                        .HasColumnType("integer");
+                    b.Property<long>("Number")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
