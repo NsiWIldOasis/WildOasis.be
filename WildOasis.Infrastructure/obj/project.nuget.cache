@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Tu1N/YGrB/JmOgR5zIwuIfNE0qp8azwaY5uxazZFF/PiMLrpnI+CWDDBk0retQZDPcgEN5NnwCwjiQEYg58now==",
+  "dgSpecHash": "jLe+oQR/lkrYhyC3aNRYsq8wCd7DImpl0aPoWto2nlFm7Fy5fQo6J+vjXoK92yPPaXDVABxJgTKiycsF8Twutg==",
   "success": true,
   "projectFilePath": "/Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.Infrastructure/WildOasis.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/nikolat/.nuget/packages/ardalis.smartenum/8.0.0/ardalis.smartenum.8.0.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/fluentvalidation/11.9.0/fluentvalidation.11.9.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.9.0/fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
@@ -44,6 +45,7 @@
     "/Users/nikolat/.nuget/packages/riok.mapperly/3.4.0/riok.mapperly.3.4.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
+    "/Users/nikolat/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/system.composition/6.0.0/system.composition.6.0.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/system.composition.attributedmodel/6.0.0/system.composition.attributedmodel.6.0.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/system.composition.convention/6.0.0/system.composition.convention.6.0.0.nupkg.sha512",

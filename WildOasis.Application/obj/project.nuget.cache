@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2Yz3MDSQYcm6jdfROzJFPcJxvIEN7RxHtGtNGsjVw3xacXuSVmm5xdB/1TZgyx1zdKNVYAzt6TOtaCDSInjuGg==",
+  "dgSpecHash": "r2f838L8+Mynn3neKrGXgbsgwkaEBveQjiWuEzlR9VyET2MXhtTHvxGser40gCSSla24dQiiLw4jBnISTedxCA==",
   "success": true,
   "projectFilePath": "/Users/nikolat/Documents/GitHub/WildOasis.be/WildOasis.Application/WildOasis.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/nikolat/.nuget/packages/ardalis.smartenum/8.0.0/ardalis.smartenum.8.0.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/fluentvalidation/11.9.0/fluentvalidation.11.9.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.9.0/fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
@@ -28,7 +29,8 @@
     "/Users/nikolat/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
     "/Users/nikolat/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "/Users/nikolat/.nuget/packages/riok.mapperly/3.4.0/riok.mapperly.3.4.0.nupkg.sha512"
+    "/Users/nikolat/.nuget/packages/riok.mapperly/3.4.0/riok.mapperly.3.4.0.nupkg.sha512",
+    "/Users/nikolat/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
