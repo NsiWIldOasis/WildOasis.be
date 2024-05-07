@@ -4,7 +4,7 @@ namespace WildOasis.BaseTest.Builders.Domain;
 
 public class ResortBuilder
 {
-    private  string _name = "-";
+    private  string _name = "resort12";
     private  string _description = "testtesttshysb";
     private  uint _number = 3442;
     

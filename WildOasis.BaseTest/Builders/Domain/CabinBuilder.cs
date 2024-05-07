@@ -5,7 +5,7 @@ namespace WildOasis.BaseTest.Builders.Domain;
 
 public class CabinBuilder
 {
-    private  string _name = "-";
+    private  string _name = "cabin11";
     private  string _description = "testtesttshysb";
     private int _maxCapacity = 3;
     private int _regularPrice = 80;
@@ -46,6 +46,12 @@ public class CabinBuilder
     public CabinBuilder WithImage(string image)
     {
         _image = image;
+        return this;
+    }
+    
+    public CabinBuilder withCategoty(Category category)
+    {
+        _category = category;
         return this;
     }
     

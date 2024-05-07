@@ -4,6 +4,9 @@ namespace WildOasis.Domain.Entities;
 
 public class Cabin
 {
+    private Cabin()
+    {
+    }
     public Cabin(
         string name,
         string description,
@@ -24,8 +27,11 @@ public class Cabin
 
     }
 
-    private Cabin()
+    public Cabin AddResort(Resort resort)
     {
+        Resort = resort;
+        return this;
+
     }
 
     public Guid Id { get;  set; }
@@ -43,10 +49,6 @@ public class Cabin
          set;
     } 
 
-    public Cabin AddResort(Resort resort)
-    {
-        Resort = resort;
-        return this;
-
-    }
+    
+   
 }

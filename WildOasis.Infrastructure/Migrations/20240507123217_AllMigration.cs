@@ -9,11 +9,26 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace WildOasis.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class AllMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Resort",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    Address = table.Column<string>(type: "text", nullable: false),
+                    Number = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Resort", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
@@ -53,6 +68,31 @@ namespace WildOasis.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cabins",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    MaxCapacity = table.Column<int>(type: "integer", nullable: false),
+                    RegularPrice = table.Column<int>(type: "integer", nullable: false),
+                    Discount = table.Column<int>(type: "integer", nullable: false),
+                    Image = table.Column<string>(type: "text", nullable: false),
+                    Category = table.Column<int>(type: "integer", nullable: false, defaultValue: 1),
+                    ResortId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cabins", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Cabins_Resort_ResortId",
+                        column: x => x.ResortId,
+                        principalTable: "Resort",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -194,6 +234,11 @@ namespace WildOasis.Infrastructure.Migrations
                 values: new object[] { "40FEB7B4-B530-4EA2-B96F-582D88277E4B", "4DAF65CB-CC0E-4C81-9183-20097EA81F5A" });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Cabins_ResortId",
+                table: "Cabins",
+                column: "ResortId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RoleClaims_RoleId",
                 table: "RoleClaims",
                 column: "RoleId");
@@ -235,6 +280,9 @@ namespace WildOasis.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Cabins");
+
+            migrationBuilder.DropTable(
                 name: "RoleClaims");
 
             migrationBuilder.DropTable(
@@ -248,6 +296,9 @@ namespace WildOasis.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "UserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Resort");
 
             migrationBuilder.DropTable(
                 name: "Roles");

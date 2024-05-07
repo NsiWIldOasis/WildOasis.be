@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using WildOasis.Domain.Enums;
 using WildOasis.Infrastructure.Contexts;
 
 #nullable disable
@@ -12,8 +13,8 @@ using WildOasis.Infrastructure.Contexts;
 namespace WildOasis.Infrastructure.Migrations
 {
     [DbContext(typeof(WildOasisDbContext))]
-    [Migration("20240330101741_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20240507123217_AllMigration")]
+    partial class AllMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -313,6 +314,72 @@ namespace WildOasis.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("WildOasis.Domain.Entities.Cabin", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Category")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Discount")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("MaxCapacity")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("RegularPrice")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("ResortId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ResortId");
+
+                    b.ToTable("Cabins", (string)null);
+                });
+
+            modelBuilder.Entity("WildOasis.Domain.Entities.Resort", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<long>("Number")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Resort", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("WildOasis.Domain.Entities.ApplicationRole", null)
@@ -368,6 +435,17 @@ namespace WildOasis.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("WildOasis.Domain.Entities.Cabin", b =>
+                {
+                    b.HasOne("WildOasis.Domain.Entities.Resort", "Resort")
+                        .WithMany("Cabins")
+                        .HasForeignKey("ResortId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Resort");
+                });
+
             modelBuilder.Entity("WildOasis.Domain.Entities.ApplicationRole", b =>
                 {
                     b.Navigation("UserRoles");
@@ -376,6 +454,11 @@ namespace WildOasis.Infrastructure.Migrations
             modelBuilder.Entity("WildOasis.Domain.Entities.ApplicationUser", b =>
                 {
                     b.Navigation("Roles");
+                });
+
+            modelBuilder.Entity("WildOasis.Domain.Entities.Resort", b =>
+                {
+                    b.Navigation("Cabins");
                 });
 #pragma warning restore 612, 618
         }

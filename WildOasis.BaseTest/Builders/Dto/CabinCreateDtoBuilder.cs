@@ -1,4 +1,5 @@
 using WildOasis.Application.Common.Dto.Cabin;
+using WildOasis.Domain.Enums;
 
 namespace WildOasis.BaseTest.Builders.Dto;
 

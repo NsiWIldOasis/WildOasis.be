@@ -29,7 +29,11 @@ public class WildOasisDbContext(DbContextOptions<WildOasisDbContext>options)
 
         if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Test")
         {
+<<<<<<< HEAD
             optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=root;Database=WildOasis");
+=======
+            optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=root;Database=WildOasis3");
+>>>>>>> d97c0336efdef8331a04e8edf1823e0753d0fdc9
         }
     }
     public DbSet<Cabin> Cabins => Set<Cabin>();

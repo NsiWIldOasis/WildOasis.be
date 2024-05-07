@@ -16,5 +16,10 @@ public class CabinsConfiguration : IEntityTypeConfiguration<WildOasis.Domain.Ent
             WithMany(r => r.Cabins).HasForeignKey("ResortId").IsRequired();
         builder.Property(b => b.Category).IsRequired().HasDefaultValue(Category.Bungalow)
             .HasConversion(p => p.Value, p => Category.FromValue(p));
+<<<<<<< HEAD
+=======
+            
+        
+>>>>>>> d97c0336efdef8331a04e8edf1823e0753d0fdc9
     }
 }
